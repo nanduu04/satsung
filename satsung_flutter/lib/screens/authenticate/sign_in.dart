@@ -30,13 +30,13 @@ class _SignInState extends State<SignIn> {
 
       resizeToAvoidBottomPadding: false ,
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
+        //backgroundColor: Colors.black,
         elevation: 0.0,
         title: Text('Sign in'),
         actions: <Widget>[
-          SizedBox(height: 60),
+          SizedBox(height: 50),
           FlatButton.icon(
-            color: Colors.white,
+            //color: Colors.grey,
             icon: Icon(Icons.person),
             label: Text('Register'),
             onPressed: () => widget.toggleView(),
@@ -115,3 +115,4 @@ Widget pic() {
     )
   );
 }
+
