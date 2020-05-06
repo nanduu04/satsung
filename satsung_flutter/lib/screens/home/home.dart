@@ -1,11 +1,10 @@
 import 'package:satsung/models/brew.dart';
-import 'package:satsung/screens/home/brew_list.dart';
-import 'package:satsung/screens/home/settings_form.dart';
+
 import 'package:satsung/services/auth.dart';
 import 'package:satsung/services/database.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'settings_form.dart';
+//import 'settings_form.dart';
 
 class Home extends StatelessWidget {
 
@@ -16,7 +15,10 @@ class Home extends StatelessWidget {
 
     void _showSettingsPanel() {
       showModalBottomSheet(isScrollControlled: true, context: context, builder: (context) {
-        return CookieDetail();
+        return Container(
+          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
+          //child: SettingsForm(),
+        );
         
       });
     }
