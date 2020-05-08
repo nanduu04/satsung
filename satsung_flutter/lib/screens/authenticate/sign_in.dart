@@ -1,5 +1,4 @@
 import 'package:satsung/services/auth.dart';
-import 'package:satsung/shared/constants.dart';
 import 'package:satsung/shared/loading.dart';
 import 'package:flutter/material.dart';
 
@@ -31,30 +30,36 @@ class _SignInState extends State<SignIn> {
       resizeToAvoidBottomPadding: false ,
       appBar: AppBar(
         //backgroundColor: Colors.black,
-        elevation: 0.0,
-        title: Text('Sign in'),
-        actions: <Widget>[
-          SizedBox(height: 50),
-          FlatButton.icon(
-            //color: Colors.grey,
-            icon: Icon(Icons.person),
-            label: Text('Register'),
-            onPressed: () => widget.toggleView(),
-          ),
-        ],
+        backgroundColor: Colors.white,
+        title: Text('Sign In', style: TextStyle(
+          color: Colors.black
+         ),),
+        leading: BackButton(
+          color: Color(0xff39d47f)),
+          
+        // actions: <Widget>[
+        //   SizedBox(height: 50),
+        //   FlatButton.icon(
+        //     //color: Colors.grey,
+        //     icon: Icon(Icons.person),
+        //     label: Text('Register'),
+        //     onPressed: () => widget.toggleView(),
+        //   ),
+        // ],
         
       ),
       body: Container(
         padding: EdgeInsets.fromLTRB(20.0, 60.0, 20.0, 10.0),
-       
-        decoration: new BoxDecoration(color: Colors.yellow),
         child: Form(
           key: _formKey,
           child: Column(
             children: <Widget>[
               SizedBox(height: 50.0),
               TextFormField(
-                decoration: textInputDecoration.copyWith(hintText: 'krishna@gmail.com'),
+                decoration: InputDecoration(labelText: 'Email',
+                border: OutlineInputBorder(),
+                hintText: 'JonDoe@gmail.com',
+                contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0)),
                 validator: (val) => val.isEmpty ? 'Enter an email' : null,
                 onChanged: (val) {
                   setState(() => email = val);
@@ -63,7 +68,10 @@ class _SignInState extends State<SignIn> {
               SizedBox(height: 20.0),
               TextFormField(
                 obscureText: true,
-                decoration: textInputDecoration.copyWith(hintText: 'password'),
+                decoration: InputDecoration(labelText: 'New Password',
+                border: OutlineInputBorder(),
+                hintText: 'Jondoe123',
+                contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0)),
                 validator: (val) => val.length < 6 ? 'Enter a password 6+ chars long' : null,
                 onChanged: (val) {
                   setState(() => password = val);
@@ -71,10 +79,10 @@ class _SignInState extends State<SignIn> {
               ),
               SizedBox(height: 20.0),
               RaisedButton(
-                color: Colors.red[300],
+                color: Color(0xff39d47f),
                 child: Text(
                   'Sign In',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
                 onPressed: () async {
                   if(_formKey.currentState.validate()){
@@ -92,7 +100,9 @@ class _SignInState extends State<SignIn> {
               SizedBox(height: 12.0),
               Text(
                 error,
-                style: TextStyle(color: Colors.red, fontSize: 14.0),
+                style: TextStyle(color: Color(0xff39d47f), fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing:  2.0),
               ),
             ],
           ),
@@ -102,17 +112,4 @@ class _SignInState extends State<SignIn> {
   }
 }
 
-Widget pic() {
-  return new Scaffold(
-    body: new Stack(
-      children: <Widget>[
-        new Container(
-          decoration: new BoxDecoration(
-            image: new DecorationImage(image: new AssetImage("assets/coffee_bg.png"), fit: BoxFit.cover,),
-          ),
-        ),
-      ],
-    )
-  );
-}
 

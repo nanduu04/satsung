@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 class Home extends StatefulWidget {
   
   _MyAppState createState() => _MyAppState();
+   
 }
 
 class _MyAppState extends State<Home> {
   int _selectedTabIndex = 0;
-  final AuthService _auth = AuthService();
+  AuthService _auth = AuthService();
 
   List _pages = [
     Text("Home page displaying where the next satsung is"),
