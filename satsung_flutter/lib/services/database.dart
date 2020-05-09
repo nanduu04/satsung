@@ -1,5 +1,5 @@
 import 'package:satsung/models/brew.dart';
-import 'package:satsung/models/user.dart';
+//import 'package:satsung/models/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DatabaseService {
@@ -31,14 +31,14 @@ class DatabaseService {
   }
 
   // user data from snapshots
-  UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
-    return UserData(
-      uid: uid,
-      name: snapshot.data['name'],
-      sugars: snapshot.data['sugars'],
-      strength: snapshot.data['strength']
-    );
-  }
+  // UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
+  //   return UserData(
+  //     uid: uid,
+  //     name: snapshot.data['name'],
+  //     sugars: snapshot.data['sugars'],
+  //     strength: snapshot.data['strength']
+  //   );
+  // }
 
   // get brews stream
   Stream<List<Brew>> get brews {
@@ -47,9 +47,9 @@ class DatabaseService {
   }
 
   // get user doc stream
-  Stream<UserData> get userData {
-    return brewCollection.document(uid).snapshots()
-      .map(_userDataFromSnapshot);
-  }
+  // Stream<UserData> get userData {
+  //   return brewCollection.document(uid).snapshots()
+  //     .map(_userDataFromSnapshot);
+  // }
 
 }
