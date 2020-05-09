@@ -2,8 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:satsung/screens/authenticate/register.dart';
 import 'package:satsung/screens/authenticate/sign_in.dart';
+import 'package:satsung/screens/home/home.dart';
+
+
 
 class HomePage extends StatelessWidget {
+
+  String error = '';
+  bool loading = false;
+
+  // text field state
+  String email = '';
+  String password = '';
+  // final Function toggleView;
+  // HomePage({ this.toggleView });
+
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(

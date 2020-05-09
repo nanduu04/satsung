@@ -13,6 +13,7 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
 
+  
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   String error = '';
@@ -111,5 +112,3 @@ class _SignInState extends State<SignIn> {
     );
   }
 }
-
-
