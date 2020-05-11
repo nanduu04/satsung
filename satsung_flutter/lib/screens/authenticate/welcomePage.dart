@@ -3,22 +3,24 @@ import 'package:flutter/cupertino.dart';
 import 'package:satsung/screens/authenticate/register.dart';
 import 'package:satsung/screens/authenticate/sign_in.dart';
 import 'package:satsung/screens/home/home.dart';
+import 'package:satsung/shared/loading.dart';
 
 
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
 
-  String error = '';
+   final Function toggleView;
+  HomePage({ this.toggleView });
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+ 
   bool loading = false;
-
-  // text field state
-  String email = '';
-  String password = '';
-  // final Function toggleView;
-  // HomePage({ this.toggleView });
-
   Widget build(BuildContext context) {
-    return Container(
+    return loading ? Loading() : Container(
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
@@ -42,6 +44,7 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
 
 Widget SignUpButton(BuildContext context) {
   return Center(

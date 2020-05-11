@@ -38,15 +38,15 @@ class _SignInState extends State<SignIn> {
         leading: BackButton(
           color: Color(0xff39d47f)),
           
-        // actions: <Widget>[
-        //   SizedBox(height: 50),
-        //   FlatButton.icon(
-        //     //color: Colors.grey,
-        //     icon: Icon(Icons.person),
-        //     label: Text('Register'),
-        //     onPressed: () => widget.toggleView(),
-        //   ),
-        // ],
+        actions: <Widget>[
+          SizedBox(height: 50),
+          FlatButton.icon(
+            //color: Colors.grey,
+            icon: Icon(Icons.person),
+            label: Text('Register'),
+            onPressed: () => widget.toggleView(),
+          ),
+        ],
         
       ),
       body: Container(
