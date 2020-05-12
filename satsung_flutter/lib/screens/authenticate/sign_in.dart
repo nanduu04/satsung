@@ -35,8 +35,8 @@ class _SignInState extends State<SignIn> {
         title: Text('Sign In', style: TextStyle(
           color: Colors.black
          ),),
-        leading: BackButton(
-          color: Color(0xff39d47f)),
+        // leading: BackButton(
+        //   color: Color(0xff39d47f)),
           
         actions: <Widget>[
           SizedBox(height: 50),
