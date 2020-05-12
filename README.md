@@ -1,1 +1,2 @@
 # satsung
+ -Flutter run

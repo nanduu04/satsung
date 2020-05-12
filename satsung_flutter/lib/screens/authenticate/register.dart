@@ -32,19 +32,17 @@ class _RegisterState extends State<Register> {
         backgroundColor: Colors.white,
         title: Text('Register', style: TextStyle(
           color: Colors.black
-        ),),
+        ),), actions: <Widget>[
+          SizedBox(height: 50.0),
+          FlatButton.icon(
+            icon: Icon(Icons.person),
+            label: Text('Sign In'),
+            onPressed: () => widget.toggleView(),
+          ),
+        ],
         leading: BackButton(
           color: Color(0xff39d47f)),
-          
-        // actions: <Widget>[
-        //   SizedBox(height: 50.0),
-        //   FlatButton.icon(
-        //     icon: Icon(Icons.person),
-        //     label: Text('Sign In'),
-        //     onPressed: () => widget.toggleView(),
-        //   ),
-        // ],
-      ),
+         ),
       body: Container(
         padding: EdgeInsets.fromLTRB(20.0, 60.0, 20.0, 10.0),
         child: Form(

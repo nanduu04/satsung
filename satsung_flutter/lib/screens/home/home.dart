@@ -10,7 +10,7 @@ class Home extends StatefulWidget {
 
 class _MyAppState extends State<Home> {
   int _selectedTabIndex = 0;
-  AuthService _auth = AuthService();
+  final AuthService _auth = AuthService();
 
   List _pages = [
     Text("Home page displaying where the next satsung is"),

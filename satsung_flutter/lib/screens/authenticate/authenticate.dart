@@ -6,24 +6,29 @@ import 'package:satsung/screens/authenticate/welcomePage.dart';
 class Authenticate extends StatefulWidget {
   @override
   _AuthenticateState createState() => _AuthenticateState();
+
 }
 
 class _AuthenticateState extends State<Authenticate> {
-
+  
+  bool hello = true;
   bool showSignIn = true;
-  void toggleView(){
-    //print(showSignIn.toString());
-    setState(() => showSignIn = !showSignIn);
+  
+  void toggleView() {
+    
+    setState(() {
+
+      showSignIn = !showSignIn;
+    });
   }
 
   @override
-  Widget build(BuildContext context) {
-    if (showSignIn) {
-      return HomePage();
-    } else if (showSignIn){
-      return SignIn(toggleView:  toggleView);
+  Widget build(BuildContext context) { 
+    if(showSignIn){
+      return SignIn(toggleView: toggleView);
     } else {
-      return Register(toggleView:  toggleView);
+      return Register(toggleView: toggleView);
     }
   }
-}
+  }
+  
