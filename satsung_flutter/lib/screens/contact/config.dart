@@ -69,12 +69,11 @@ class ContactUs extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
+         
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            CircleAvatar(
-              radius: 50.0,
-              backgroundImage: logo,
-            ),
+            
+            
             Text(
               companyName,
               style: TextStyle(
@@ -84,6 +83,11 @@ class ContactUs extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            CircleAvatar(
+              radius: 60.0,
+              backgroundImage: logo,
+            ),
+            
             /**Visibility(
               visible: tagLine != null,
               child: Text(

@@ -1,6 +1,6 @@
 import 'package:satsung/models/user.dart';
 import 'package:satsung/screens/authenticate/authenticate.dart';
-import 'package:satsung/screens/authenticate/welcomePage.dart';
+//import 'package:satsung/screens/authenticate/welcomePage.dart';
 import 'package:satsung/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
