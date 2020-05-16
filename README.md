@@ -1,4 +1,4 @@
-# vogro_flutter
+# SatSung
 
 A new Flutter project.
 
