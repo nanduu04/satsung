@@ -1,86 +1,86 @@
-import 'dart:io';
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_full_pdf_viewer/full_pdf_viewer_scaffold.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:satsung/screens/file/chanting.dart';
+import 'package:satsung/screens/file/uchharan.dart';
+import 'package:satsung/screens/file/invocation.dart';
+import 'invocation.dart';
 
-// Change this to fit the PDF file you are using to test.
-const String _documentPath = 'assets/shlokas.pdf';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class File extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Opening a PDF',
-      home: MyHomePage(),
-    );
-  }
+  _FileState createState() => _FileState();
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  // This moves the PDF file from the assets to a place accessible by our PDF viewer.
-  Future<String> prepareTestPdf() async {
-    final ByteData bytes =
-    await DefaultAssetBundle.of(context).load(_documentPath);
-    final Uint8List list = bytes.buffer.asUint8List();
-
-    final tempDir = await getTemporaryDirectory();
-    final tempDocumentPath = '${tempDir.path}/$_documentPath';
-
-    final file = await File(tempDocumentPath).create(recursive: true);
-    file.writeAsBytesSync(list);
-    return tempDocumentPath;
-  }
-
+class _FileState extends State<File> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
-              child: const Text('Open PDF'),
-              onPressed: () {
-                // We need to prepare the test PDF, and then we can display the PDF.
-                prepareTestPdf().then((path) {
+            SizedBox(height: 10.0),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              margin: EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 25.0,
+              ),
+              color: Colors.orangeAccent[400],
+              child: ListTile(
+                title: Text('Invocation Shlokas'),
+                onTap: () {
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => FullPdfViewerScreen(path)),
+                      context,
+                      MaterialPageRoute(builder: (context) => Invocation())
                   );
-                });
-              },
+                },
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              margin: EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 25.0,
+              ),
+              color: Colors.orangeAccent[400],
+              child: ListTile(
+                title: Text('Geeta Chanting Shlokas'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Geeta())
+                  );
+                },
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              margin: EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 25.0,
+              ),
+              color: Colors.orangeAccent[400],
+              child: ListTile(
+                title: Text('Uchharan Guidelines'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Guidelines())
+                  );
+                },
+              ),
             ),
           ],
         ),
       ),
+      appBar: AppBar(
+        title: Text("Files"),backgroundColor: Colors.orangeAccent[400]
+      ),
     );
-  }
-}
-
-class FullPdfViewerScreen extends StatelessWidget {
-  final String pdfPath;
-
-  FullPdfViewerScreen(this.pdfPath);
-
-  @override
-  Widget build(BuildContext context) {
-    return PDFViewerScaffold(
-        appBar: AppBar(
-          title: Text("Document"),
-          backgroundColor: Colors.orangeAccent[400],
-        ),
-        path: pdfPath);
   }
 }

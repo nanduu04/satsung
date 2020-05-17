@@ -18,8 +18,6 @@ environment:
 
 dependencies:
   contactus: ^1.1.4
-  flutter_full_pdf_viewer: ^1.0.4
-  path_provider: ^0.4.1
   flutter:
     sdk: flutter
   
@@ -30,8 +28,12 @@ dependencies:
   cloud_firestore: ^0.12.9+4
   provider: ^3.1.0
   flutter_spinkit: "^4.0.0"
-  #flutter_full_pdf_viewer: ^1.0.4
-  #path_provider: ^0.4.1
+  flutter_full_pdf_viewer: ^1.0.4
+  path_provider: ^1.1.0
+  native_pdf_view: ^3.2.0
+  flutter_fullpdfview: ^1.0.12
+  flutter_plugin_pdf_viewer: ^1.0.7
+
 
 dev_dependencies:
   flutter_test:
