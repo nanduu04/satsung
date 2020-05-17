@@ -32,7 +32,7 @@ class _MyAppState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("Home Page"), backgroundColor: Colors.lightBlue[900],
+          title: Text("Satsung"), backgroundColor: Colors.blue,
           actions: <Widget>[
             FlatButton.icon(
               icon: Icon(Icons.person),

@@ -26,7 +26,8 @@ class _FileState extends State<File> {
                 vertical: 10.0,
                 horizontal: 25.0,
               ),
-              color: Colors.orangeAccent[400],
+               
+              color: Color(0xff39d47f),
               child: ListTile(
                 title: Text('Invocation Shlokas'),
                 onTap: () {
@@ -45,7 +46,7 @@ class _FileState extends State<File> {
                 vertical: 10.0,
                 horizontal: 25.0,
               ),
-              color: Colors.orangeAccent[400],
+              color: Color(0xff39d47f),
               child: ListTile(
                 title: Text('Geeta Chanting Shlokas'),
                 onTap: () {
@@ -64,7 +65,7 @@ class _FileState extends State<File> {
                 vertical: 10.0,
                 horizontal: 25.0,
               ),
-              color: Colors.orangeAccent[400],
+              color: Color(0xff39d47f),
               child: ListTile(
                 title: Text('Uchharan Guidelines'),
                 onTap: () {
@@ -78,9 +79,7 @@ class _FileState extends State<File> {
           ],
         ),
       ),
-      appBar: AppBar(
-        title: Text("Files"),backgroundColor: Colors.orangeAccent[400]
-      ),
+   
     );
   }
 }
