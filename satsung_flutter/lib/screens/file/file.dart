@@ -13,7 +13,7 @@ class _FileState extends State<File> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orangeAccent,
+
       body: Center(
         child: Column(
           children: <Widget>[

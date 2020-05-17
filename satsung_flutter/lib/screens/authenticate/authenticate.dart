@@ -1,7 +1,7 @@
 import 'package:satsung/screens/authenticate/register.dart';
 import 'package:satsung/screens/authenticate/sign_in.dart';
 import 'package:flutter/material.dart';
-import 'package:satsung/screens/authenticate/welcomePage.dart';
+//import 'package:satsung/screens/authenticate/welcomePage.dart';
 
 class Authenticate extends StatefulWidget {
   @override
@@ -31,4 +31,6 @@ class _AuthenticateState extends State<Authenticate> {
     }
   }
   }
+  
+
   

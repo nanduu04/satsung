@@ -40,8 +40,8 @@ class _RegisterState extends State<Register> {
             onPressed: () => widget.toggleView(),
           ),
         ],
-        leading: BackButton(
-          color: Color(0xff39d47f)),
+        // leading: BackButton(
+        //   color: Color(0xff39d47f)),
          ),
       body: Container(
         padding: EdgeInsets.fromLTRB(20.0, 60.0, 20.0, 10.0),

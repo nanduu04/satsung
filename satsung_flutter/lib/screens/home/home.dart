@@ -1,3 +1,5 @@
+
+
 import 'package:satsung/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:satsung/screens/contact/contactus.dart';
@@ -6,7 +8,6 @@ import 'package:satsung/screens/file/file.dart';
 class Home extends StatefulWidget {
 
   _MyAppState createState() => _MyAppState();
-
 }
 
 class _MyAppState extends State<Home> {
@@ -15,7 +16,9 @@ class _MyAppState extends State<Home> {
 
   List _pages = [
     Text("Home page displaying where the next satsung is"),
+
     File(),
+
     Contact(),
   ];
 
