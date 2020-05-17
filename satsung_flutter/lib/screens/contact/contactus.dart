@@ -1,15 +1,14 @@
 import 'package:satsung/screens/contact/config.dart';
 import 'package:flutter/material.dart';
 
-/**void main() => runApp(MaterialApp(
-  home: Contact(),
-)); */
-
 
 class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text('Contact Us'), backgroundColor: Colors.orangeAccent[400],
+        ),
         bottomNavigationBar: ContactUsBottomAppBar(
           email: 'krishna@gmail.com',
           backgroundColor: Colors.orangeAccent[400],
