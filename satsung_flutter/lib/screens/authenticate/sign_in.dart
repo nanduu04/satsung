@@ -23,6 +23,7 @@ class _SignInState extends State<SignIn> {
   String email = '';
   String password = '';
 
+
   @override
   Widget build(BuildContext context) {
    
@@ -96,8 +97,9 @@ class _SignInState extends State<SignIn> {
                       });
                     }
                   }
-                }
+                }  
               ),
+              ShowForgotPassword(),
               SizedBox(height: 12.0),
               Text(
                 error,
@@ -112,3 +114,20 @@ class _SignInState extends State<SignIn> {
     );
   }
 }
+
+
+Widget ShowForgotPassword() {
+    return Container(
+      child: FlatButton(
+        child: Text(
+          "Forgot Password?",
+          style: TextStyle(color: Color(0xff39d47f)),
+        ),
+        onPressed: () {
+          // setState(() {
+          //   authFormType = AuthFormType.reset;
+          // });
+        },
+      ),
+    );
+  }
