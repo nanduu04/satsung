@@ -14,13 +14,16 @@ class _FileState extends State<File> {
   Widget build(BuildContext context) {
     return Scaffold(
       
-
+      resizeToAvoidBottomPadding: false,
       body: Center(
         
         child: Column(
+          
           children: <Widget>[
+            
             SizedBox(height: 10.0),
             Card(
+              
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50.0),
               ),
@@ -77,6 +80,65 @@ class _FileState extends State<File> {
                 },
               ),
             ),
+             Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              margin: EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 25.0,
+              ),
+              color: Color(0xff39d47f),
+              child: ListTile(
+                title: Text('Uchharan Guidelines'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Guidelines())
+                  );
+                },
+              ),
+            ),
+             Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              margin: EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 25.0,
+              ),
+              color: Color(0xff39d47f),
+              child: ListTile(
+                title: Text('Uchharan Guidelines'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Guidelines())
+                  );
+                },
+              ),
+            ),
+             Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              margin: EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 25.0,
+              ),
+              color: Color(0xff39d47f),
+              child: ListTile(
+                title: Text('Uchharan Guidelines'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Guidelines())
+                  );
+                },
+              ),
+            ),
+          
+             
           ],
         ),
       ),

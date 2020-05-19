@@ -85,7 +85,7 @@ class _MyAppState extends State<Home> {
                                     
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold,
-                                    textStyle: TextStyle(color: Colors.white),
+                                    textStyle: TextStyle(color: Color(0xff39d47f)),
                                   )
                               ),
                               
@@ -130,7 +130,7 @@ class _MyAppState extends State<Home> {
                                                   fontSize: 18.0,
                                                   fontWeight: FontWeight.bold,
                                                   textStyle:
-                                                  TextStyle(color: Colors.white)
+                                                  TextStyle(color: Color(0xff39d47f))
                                               )
                                           ),
                                           Text(
@@ -168,7 +168,7 @@ class _MyAppState extends State<Home> {
                                   style: GoogleFonts.montserrat(
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold,
-                                    textStyle: TextStyle(color: Colors.white),
+                                    textStyle: TextStyle(color: Color(0xff39d47f)),
                                   )
                               )
                             ],
@@ -246,7 +246,7 @@ class _MyAppState extends State<Home> {
                               fontWeight: FontWeight.w500,
                               fontSize: 15.0,
                               textStyle: TextStyle(
-                                  color: Colors.white
+                                  color: Color(0xff39d47f)
                               )
                           )
                       ),
