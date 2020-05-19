@@ -19,6 +19,7 @@ class Contact extends StatelessWidget {
           companyColor: Colors.white,
           phoneNumber: '3657734347',
         ),
+
       );
     }
   }
