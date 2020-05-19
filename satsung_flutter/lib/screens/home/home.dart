@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:satsung/screens/contact/contactus.dart';
 import 'package:satsung/screens/file/file.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flip_card/flip_card.dart';
 
 class Home extends StatefulWidget {
   final imgPath, title;
@@ -36,8 +37,13 @@ class _MyAppState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+
+//Building the main big block on the home page
+
         children: <Widget>[
+          
           Container(
+            
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
@@ -47,13 +53,13 @@ class _MyAppState extends State<Home> {
             ),
           ),
           BackdropFilter(
-            filter: new ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+             filter: new ImageFilter.blur(sigmaX: 2, sigmaY: 2),
             child: Container(
-              decoration: BoxDecoration(color: Colors.black.withOpacity(0.5)),
+              decoration: BoxDecoration(color: Colors.black.withOpacity(0.2)),
             ),
           ),
           Padding(
-              padding: EdgeInsets.fromLTRB(15.0, 35.0, 15.0, 15.0),
+              padding: EdgeInsets.fromLTRB(15.0, 15.0, 1.0, 15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -72,90 +78,93 @@ class _MyAppState extends State<Home> {
               child: Padding(
                   padding: EdgeInsets.all(1.0),
                   child: Column(
+                    
                     children: <Widget>[
-                      Container(
-                          width: MediaQuery.of(context).size.width - 1.0,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              
-                              Text('Upcoming Satsangs',
-                              
+                      Text('Next Satsang:',
                                   style: GoogleFonts.montserrat(
-                                    
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold,
                                     textStyle: TextStyle(color: Color(0xff39d47f)),
                                   )
                               ),
-                              
-                              // IconButton(
-                              //   icon: Icon(Icons.more_vert, color: Colors.white),
-                              //   onPressed: () {},
-                              // )
-                            ],
-                          )
-                      ),
                       SizedBox(height: 10.0),
                       Stack(
                         children: <Widget>[
-                          Padding(
-                              padding: EdgeInsets.only(right: 10.0),
+                         
+                          FlipCard(
+                            
+                            front:
+                            Padding(
+                              
+                              padding: EdgeInsets.only(top: 10.0),
                               child: Container(
                                 height: 200.0,
                                 width: 325.0,
+                                
+                                
                                 decoration: BoxDecoration(
+                                  
                                     borderRadius: BorderRadius.circular(10.0),
+                                    
                                     image: DecorationImage(
                                         image: AssetImage('assets/home1.jpg'),
                                         fit: BoxFit.cover,
-                                        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.darken)
+                                        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.darken)
                                     )
                                 ),
                               )
                           ),
-                          Positioned(
-                              top: 125.0,
-                              left: 10.0,
+                          
+
+                         
+                          
+                          back : Positioned(
+                              // top: 125.0,
+                              // left: 10.0,
                               child: Container(
-                                  width: MediaQuery.of(context).size.width - 60.0,
+                                height: 200.0,
+                                width: 325.0,
+                                 decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    image: DecorationImage(
+                                        image: AssetImage('assets/mk.jpg'),
+                                        fit: BoxFit.cover,
+                                        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.darken)
+                                    )
+                                ),
+                                //  width: MediaQuery.of(context).size.width - 60.0,
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      Column(
+                                         Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text('Tuesday Geeta Class',
-                                              style: GoogleFonts.montserrat(
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.bold,
-                                                  textStyle:
-                                                  TextStyle(color: Color(0xff39d47f))
-                                              )
-                                          ),
-                                          Text(
-                                            'Sharma Residence at 7:00pm',
-                                            style: GoogleFonts.montserrat(
-                                                fontSize: 14.0,
-                                                textStyle:
-                                                TextStyle(color: Colors.white)),
-                                          )
-                                        ],
+                                        // children: <Widget>[
+                                        //   Text('Tuesday Geeta Class',
+                                        //       style: GoogleFonts.montserrat(
+                                        //           fontSize: 18.0,
+                                        //           fontWeight: FontWeight.bold,
+                                        //           textStyle:
+                                        //           TextStyle(color: Color(0xff39d47f))
+                                        //       )
+                                        //   ),
+                                          
+                                        // ],
                                       ),
+                                          // Text(
+                                          //   'Sharma Residence at 7:00pm',
+                                          //   style: GoogleFonts.montserrat(
+                                          //       fontSize: 14.0,
+                                          //       textStyle:
+                                          //       TextStyle(color: Colors.white)),
+                                          // )
                                       Container(
-                                        height: 40.0,
-                                        width: 40.0,
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(7.0),
-                                            color: Colors.white),
-                                        child: Center(
-                                          child: Icon(Icons.arrow_forward_ios, color: Color(0xFFFD4F99), size: 14.0),
-                                        ),
+                                       
                                       )
                                     ],
                                   )
                               )
                           )
+                           ),
                         ],
                       ),
                       SizedBox(height: 20.0),
@@ -164,7 +173,7 @@ class _MyAppState extends State<Home> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              Text('More Satsangs',
+                              Text('More Satsangs:',
                                   style: GoogleFonts.montserrat(
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold,
@@ -203,8 +212,10 @@ class _MyAppState extends State<Home> {
     return Padding(
         padding: EdgeInsets.all(10.0),
         child: Stack(
+          
             children: [
-              Container(
+              FlipCard (
+              front: Container(
                   height: 175.0,
                   width: 150.0,
                   decoration: BoxDecoration(
@@ -214,33 +225,35 @@ class _MyAppState extends State<Home> {
                           fit: BoxFit.cover,
                           colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.darken)
                       )
-                  )
-              ),
-              Positioned(
-                  top: 15.0,
-                  right: 15.0,
+                  ),
                   child: Container(
                       height: 25.0,
                       width: 25.0,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5.0),
-                          color: Colors.white
+                          //  image: DecorationImage(
+                          //               image: AssetImage('assets/mk.jpg'),
+                          //               fit: BoxFit.cover,
+                          //               colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.darken)
+                          // )
                       ),
-                      child: Center(
-                          child: Icon(
-                            Icons.location_on,
-                            color: Color(0xFFFD4F99),
-                            size: 14.0,
-                          )
-                      )
                   )
               ),
-              Positioned(
-                  top: 125.0,
-                  left: 15.0,
+              back: Container(
+                decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                           image: DecorationImage(
+                                        image: AssetImage('assets/mk.jpg'),
+                                        fit: BoxFit.cover,
+                                        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.darken)
+                          )
+                      ),
+             
                   child: Column(
+                    
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
+                    
                       Text(placeName,
                           style: GoogleFonts.montserrat(
                               fontWeight: FontWeight.w500,
@@ -261,6 +274,7 @@ class _MyAppState extends State<Home> {
                       )
                     ],
                   )
+              )
               )
             ]
         )
