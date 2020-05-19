@@ -32,36 +32,37 @@ class _MyAppState extends State<Home1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Radhey Radhey'),
-              decoration: BoxDecoration(
-                color: Color(0xFFFD4F99),
-              ),
-            ),
-            ListTile(
-              title: Text('Profile'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Text('Settings'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-          ],
-        ),
-      ),
+      // drawer: Drawer(
+      //   child: ListView(
+      //     // Important: Remove any padding from the ListView.
+      //     padding: EdgeInsets.zero,
+      //     children: <Widget>[
+      //       DrawerHeader(
+      //         child: Text('Radhey Radhey'),
+      //         decoration: BoxDecoration(
+      //           color: Color(0xFFFD4F99),
+      //         ),
+              
+      //       ),
+      //       ListTile(
+      //         title: Text('Profile'),
+      //         onTap: () {
+      //           // Update the state of the app.
+      //           // ...
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: Text('Settings'),
+      //         onTap: () {
+      //           // Update the state of the app.
+      //           // ...
+      //         },
+      //       ),
+      //     ],
+      //   ),
+      // ),
       appBar: AppBar(
-          title: Text("Satsung"), backgroundColor: Colors.blue,
+          title: Text("Radhey Radhey"), backgroundColor: Colors.blue,
           actions: <Widget>[
             FlatButton.icon(
               icon: Icon(Icons.person),
@@ -73,16 +74,16 @@ class _MyAppState extends State<Home1> {
       body: Center(child: _pages[_selectedTabIndex]),
 
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        selectedItemColor:Color(0xff39d47f),
+        unselectedItemColor: Colors.black,
         currentIndex: _selectedTabIndex,
 
         onTap: _changeIndex,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Home")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.picture_as_pdf), title: Text("Files")),
-
-          BottomNavigationBarItem(
-              icon: Icon(Icons.contacts), title: Text("Contact")),
+          BottomNavigationBarItem(icon: Icon(Icons.picture_as_pdf), title: Text("Files")),
+          BottomNavigationBarItem(icon: Icon(Icons.contacts), title: Text("Contact")),
         ],
       ),
     );

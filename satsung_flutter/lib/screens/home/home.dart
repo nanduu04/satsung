@@ -42,12 +42,12 @@ class _MyAppState extends State<Home> {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/background1.jpg'), fit: BoxFit.cover)
+                    image: AssetImage('assets/nackground.jpg'), fit: BoxFit.cover)
 
             ),
           ),
           BackdropFilter(
-            filter: new ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+            filter: new ImageFilter.blur(sigmaX: 2, sigmaY: 2),
             child: Container(
               decoration: BoxDecoration(color: Colors.black.withOpacity(0.5)),
             ),
@@ -57,38 +57,42 @@ class _MyAppState extends State<Home> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('Radhey Radhey',
-                      style: GoogleFonts.montserrat(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w400,
-                          textStyle: TextStyle(color: Colors.white)
-                      )
-                  ),
+                  // Text('Radhey Radhey',
+                  //     style: GoogleFonts.montserrat(
+                  //         fontSize: 16.0,
+                  //         fontWeight: FontWeight.w400,
+                  //         textStyle: TextStyle(color: Colors.white)
+                  //     )
+                  // ),
                 ],
               )
           ),
           Positioned(
-              top: 100.0,
+              top: 10.0,
               child: Padding(
-                  padding: EdgeInsets.all(15.0),
+                  padding: EdgeInsets.all(1.0),
                   child: Column(
                     children: <Widget>[
                       Container(
-                          width: MediaQuery.of(context).size.width - 15.0,
+                          width: MediaQuery.of(context).size.width - 1.0,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
+                              
                               Text('Upcoming Satsangs',
+                              
                                   style: GoogleFonts.montserrat(
+                                    
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold,
                                     textStyle: TextStyle(color: Colors.white),
                                   )
                               ),
-                              IconButton(
-                                icon: Icon(Icons.more_vert, color: Colors.white),
-                                onPressed: () {},
-                              )
+                              
+                              // IconButton(
+                              //   icon: Icon(Icons.more_vert, color: Colors.white),
+                              //   onPressed: () {},
+                              // )
                             ],
                           )
                       ),
@@ -103,7 +107,7 @@ class _MyAppState extends State<Home> {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     image: DecorationImage(
-                                        image: AssetImage('assets/geeta.jpg'),
+                                        image: AssetImage('assets/home1.jpg'),
                                         fit: BoxFit.cover,
                                         colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.darken)
                                     )
@@ -177,11 +181,11 @@ class _MyAppState extends State<Home> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: <Widget>[
-                              _buildListItem('assets/geeta.jpg', 'Saturday Satsang',
+                              _buildListItem('assets/home4.jpg', 'Saturday Satsang',
                                   '5:00pm'),
-                              _buildListItem('assets/geeta.jpg', 'Sunday Satsang',
+                              _buildListItem('assets/home2.jpg', 'Sunday Satsang',
                                   '6:00pm'),
-                              _buildListItem('assets/geeta.jpg', 'Tuesday Satsang',
+                              _buildListItem('assets/home3.jpg', 'Tuesday Satsang',
                                   '7:00pm')
                             ],
                           )
@@ -224,7 +228,7 @@ class _MyAppState extends State<Home> {
                       ),
                       child: Center(
                           child: Icon(
-                            Icons.bookmark_border,
+                            Icons.location_on,
                             color: Color(0xFFFD4F99),
                             size: 14.0,
                           )

@@ -13,8 +13,10 @@ class _FileState extends State<File> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
 
       body: Center(
+        
         child: Column(
           children: <Widget>[
             SizedBox(height: 10.0),
@@ -26,7 +28,6 @@ class _FileState extends State<File> {
                 vertical: 10.0,
                 horizontal: 25.0,
               ),
-               
               color: Color(0xff39d47f),
               child: ListTile(
                 title: Text('Invocation Shlokas'),
