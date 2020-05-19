@@ -34,6 +34,7 @@ dependencies:
   native_pdf_view: ^3.2.0
   flutter_fullpdfview: ^1.0.12
   flutter_plugin_pdf_viewer: ^1.0.7
+  flip_card: ^0.4.4
 
 
 dev_dependencies:
