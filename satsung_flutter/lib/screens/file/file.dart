@@ -13,9 +13,13 @@ class _FileState extends State<File> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+         appBar: AppBar(
+          title: Text("Radhey Radhey"), backgroundColor: Colors.blue,
+          ),
       
       resizeToAvoidBottomPadding: false,
       body: Center(
+        
         
         child: Column(
           

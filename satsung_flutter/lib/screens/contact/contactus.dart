@@ -7,7 +7,9 @@ class Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-        
+         appBar: AppBar(
+          title: Text("Radhey Radhey"), backgroundColor: Colors.blue,
+          ),
         backgroundColor: Colors.white,
 
         body: ContactUs(
