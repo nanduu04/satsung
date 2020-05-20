@@ -48,12 +48,12 @@ class _MyAppState extends State<Home> {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/nackground.jpg'), fit: BoxFit.cover)
+                    image: AssetImage('assets/mk.jpg'), fit: BoxFit.cover)
 
             ),
           ),
           BackdropFilter(
-             filter: new ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+             filter: new ImageFilter.blur(sigmaX: 1, sigmaY: 1),
             child: Container(
               decoration: BoxDecoration(color: Colors.black.withOpacity(0.2)),
             ),
@@ -76,9 +76,8 @@ class _MyAppState extends State<Home> {
           Positioned(
               top: 10.0,
               child: Padding(
-                  padding: EdgeInsets.all(1.0),
+                  padding: EdgeInsets.fromLTRB(5.0, 50, 1.0, 15.0),
                   child: Column(
-                    
                     children: <Widget>[
                       Text('Next Satsang:',
                                   style: GoogleFonts.montserrat(
@@ -195,7 +194,10 @@ class _MyAppState extends State<Home> {
                               _buildListItem('assets/home2.jpg', 'Sunday Satsang',
                                   '6:00pm'),
                               _buildListItem('assets/home3.jpg', 'Tuesday Satsang',
+                                  '7:00pm'),
+                               _buildListItem('assets/home2.jpg', 'Tuesday Satsang',
                                   '7:00pm')
+                                  
                             ],
                           )
                       )
@@ -223,7 +225,7 @@ class _MyAppState extends State<Home> {
                       image: DecorationImage(
                           image: AssetImage(imgPath),
                           fit: BoxFit.cover,
-                          colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.darken)
+                          colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.darken)
                       )
                   ),
                   child: Container(
