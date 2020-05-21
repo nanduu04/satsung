@@ -53,9 +53,9 @@ class _MyAppState extends State<Home> {
             ),
           ),
           BackdropFilter(
-             filter: new ImageFilter.blur(sigmaX: 1, sigmaY: 1),
+             filter: new ImageFilter.blur(sigmaX: 0, sigmaY: 0),
             child: Container(
-              decoration: BoxDecoration(color: Colors.black.withOpacity(0.2)),
+              decoration: BoxDecoration(color: Colors.black.withOpacity(0)),
             ),
           ),
           Padding(

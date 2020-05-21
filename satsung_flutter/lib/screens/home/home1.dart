@@ -1,5 +1,6 @@
 
 
+import 'package:flutter/services.dart';
 import 'package:satsung/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:satsung/screens/contact/contactus.dart';
@@ -29,50 +30,82 @@ class _MyAppState extends State<Home1> {
     });
   }
 
+  
   @override
   Widget build(BuildContext context) {
-    
+      
     return Scaffold(
-      appBar: AppBar(
-          title: Text("Radhey Radhey"), backgroundColor: Colors.blue, 
-            ),
+         appBar: AppBar(
+          iconTheme: IconThemeData(
+          color: Color(0xff39d47f), //change your color here
+        ),
+          title: Text("Radhey Radhey", style: TextStyle(decoration: TextDecoration.none, color: Color(0xff39d47f)),),
+         backgroundColor: Colors.white, 
+        ),
       
       drawer: Drawer(
-      
+
         child: ListView(
           
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Radhey Radhey',style: TextStyle( decoration: TextDecoration.underline,
-              fontWeight: FontWeight.bold, color: Colors.black
+              child: Text('',style: TextStyle( decoration: TextDecoration.underline,
+              fontWeight: FontWeight.bold, color: Color(0xff39d47f), fontSize: 20, backgroundColor: Colors.green, 
               ),
             ),
             decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/mk.jpg'), fit: BoxFit.cover)
+                image: AssetImage('assets/rk.png'), fit: BoxFit.cover),
+            ),
+            ),
+            new Container(
+                child: ListTile(
+               leading: Icon(Icons.picture_as_pdf),
+              title: Text('Files' ,style: TextStyle( decoration: TextDecoration.none,
+              fontWeight: FontWeight.bold, color: Color(0xff39d47f), fontSize: 20,)),
 
+               onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => File())
+                  );
+                },
+              
             ),
+
+            decoration:
+              new BoxDecoration(
+                border: new Border(
+                    bottom: new BorderSide()
+                )
+            )
+            ,
+            
             ),
-            ListTile(
-              title: Text('Contact'),
+           
+           new Container( 
+               child: ListTile(
+                 leading: Icon(Icons.contacts),
+              title: Text('Contact', style: TextStyle( decoration: TextDecoration.none,
+              fontWeight: FontWeight.bold, color: Color(0xff39d47f), fontSize: 20,)),
               onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => Contact())
                   );
                 },
+             
             ),
-            ListTile(
-              title: Text('Files'),
-              onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => File())
-                  );
-                },
-            ),
+            decoration:
+              new BoxDecoration(
+                border: new Border(
+                    bottom: new BorderSide()
+                )
+            )
+           ),
+           
              FlatButton.icon(
               label: Text('logout'),
                icon: Icon(Icons.person),
