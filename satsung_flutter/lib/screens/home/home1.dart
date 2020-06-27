@@ -56,6 +56,7 @@ class _MyAppState extends State<Home1> {
               ),
             ),
             decoration: BoxDecoration(
+              
             image: DecorationImage(
                 image: AssetImage('assets/rk.png'), fit: BoxFit.cover),
             ),

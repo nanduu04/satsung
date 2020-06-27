@@ -47,6 +47,7 @@ class _MyAppState extends State<Home> {
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
+              
                 image: DecorationImage(
                     image: AssetImage('assets/mk.jpg'), fit: BoxFit.cover)
 
@@ -56,6 +57,7 @@ class _MyAppState extends State<Home> {
              filter: new ImageFilter.blur(sigmaX: 0, sigmaY: 0),
             child: Container(
               decoration: BoxDecoration(color: Colors.black.withOpacity(0)),
+              
             ),
           ),
           Padding(
@@ -102,6 +104,7 @@ class _MyAppState extends State<Home> {
                                 
                                 
                                 decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.black, width: 2),
                                   
                                     borderRadius: BorderRadius.circular(10.0),
                                     
@@ -124,6 +127,7 @@ class _MyAppState extends State<Home> {
                                 height: 200.0,
                                 width: 325.0,
                                  decoration: BoxDecoration(
+                                   border: Border.all(color: Colors.black, width: 2),
                                     borderRadius: BorderRadius.circular(10.0),
                                     image: DecorationImage(
                                         image: AssetImage('assets/mk.jpg'),
@@ -168,8 +172,10 @@ class _MyAppState extends State<Home> {
                       ),
                       SizedBox(height: 20.0),
                       Container(
+                        
                           width: MediaQuery.of(context).size.width - 15.0,
                           child: Row(
+                            
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text('More Satsangs:',
@@ -184,6 +190,7 @@ class _MyAppState extends State<Home> {
                       ),
                       SizedBox(height: 15.0),
                       Container(
+                  
                           height: 200.0,
                           width: MediaQuery.of(context).size.width,
                           child: ListView(
